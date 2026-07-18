@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>消研日报 · IBD 每日精读</title>
+  <meta http-equiv="refresh" content="5;url=https://2xhl7kxfndm3.space.mcode.cn">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #fff;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      color: #1c222d;
+      max-width: 560px;
+      width: 100%;
+      border-radius: 24px;
+      padding: 40px 32px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .logo { font-size: 56px; margin-bottom: 12px; }
+    h1 { font-size: 28px; margin-bottom: 8px; color: #4338ca; }
+    .subtitle { color: #6b7280; margin-bottom: 24px; font-size: 14px; }
+    .today {
+      background: #f3f4f6;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .today .date { font-weight: 700; color: #4338ca; font-size: 18px; }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 16px 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4); }
+    .countdown { color: #6b7280; font-size: 13px; margin-top: 16px; }
+    .countdown strong { color: #4338ca; }
+    .footer { margin-top: 24px; font-size: 12px; color: #9ca3af; }
+    .meta { margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 12px; color: #9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🐹</div>
+    <h1>消研日报 · IBD 每日精读</h1>
+    <p class="subtitle">每天 10:20 北京时间 · 10 篇顶刊精读</p>
+
+    <div class="today">
+      <div class="date" id="today-date">2026-07-18</div>
+      <div style="margin-top:6px;">v3.3 · 数据/代码分离版</div>
+    </div>
+
+    <a class="btn" href="https://2xhl7kxfndm3.space.mcode.cn">🌐 打开今日网站 →</a>
+
+    <div class="countdown">5 秒后自动跳转 · 或点上方按钮</div>
+
+    <div class="meta">
+      永久入口：<code>xiaoyan163.github.io</code><br>
+      数据源：PubMed / 期刊官方 · AI 辅助整理 · 不构成诊疗建议
+    </div>
+
+    <div class="footer">维护者：哈宝 🐹 · MaxClaw Agent</div>
+  </div>
+
+  <script>
+    // 实时显示今天日期
+    const now = new Date();
+    const yyyy = now.getUTCFullYear();
+    const mm = String(now.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(now.getUTCDate()).padStart(2, '0');
+    document.getElementById('today-date').textContent = `${yyyy}-${mm}-${dd}`;
+  </script>
+</body>
+</html>
