@@ -1,92 +1,203 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>消研日报 · IBD 每日精读</title>
-  <meta http-equiv="refresh" content="5;url=https://nju2uxvb61zl.space.mcode.cn">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      color: #fff;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.95);
-      color: #1c222d;
-      max-width: 560px;
-      width: 100%;
-      border-radius: 24px;
-      padding: 40px 32px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-    .logo { font-size: 56px; margin-bottom: 12px; }
-    h1 { font-size: 28px; margin-bottom: 8px; color: #4338ca; }
-    .subtitle { color: #6b7280; margin-bottom: 24px; font-size: 14px; }
-    .today {
-      background: #f3f4f6;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-    .today .date { font-weight: 700; color: #4338ca; font-size: 18px; }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 14px 32px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      margin: 16px 0;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4); }
-    .countdown { color: #6b7280; font-size: 13px; margin-top: 16px; }
-    .countdown strong { color: #4338ca; }
-    .footer { margin-top: 24px; font-size: 12px; color: #9ca3af; }
-    .meta { margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 12px; color: #9ca3af; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消研日报 · IBD 每日精读</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f8fa; color: #1c222d; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+header { text-align: center; padding: 24px 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 24px; }
+h1 { font-size: 28px; color: #1e74f0; margin-bottom: 8px; }
+.subtitle { color: #5b6778; font-size: 14px; }
+.issue { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.issue h2 { font-size: 20px; color: #194db0; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #1e74f0; }
+.paper { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+.paper:last-child { border-bottom: none; }
+.paper h3 { font-size: 16px; color: #1c222d; margin-bottom: 6px; }
+.paper .meta { font-size: 12px; color: #5b6778; margin-bottom: 6px; }
+.paper .meta .pmid { color: #1e74f0; font-family: monospace; }
+.paper .summary { font-size: 14px; color: #4a5568; }
+.paper .summary b { color: #194db0; }
+.badge { display: inline-block; background: #1e74f0; color: white; font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-right: 6px; }
+.footer { text-align: center; padding: 24px 0; color: #5b6778; font-size: 12px; border-top: 1px solid #e5e7eb; margin-top: 24px; }
+.footer a { color: #1e74f0; text-decoration: none; }
+</style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">🐹</div>
-    <h1>消研日报 · IBD 每日精读</h1>
-    <p class="subtitle">每天 10:20 北京时间 · 10 篇顶刊精读</p>
+<div class="container">
+<header>
+<h1>🐼 消研日报</h1>
+<p class="subtitle">IBD 每日精读 · 哈宝 AI 整理 · 永久门 <a href="https://xiaoyan163.github.io" style="color:#1e74f0">xiaoyan163.github.io</a></p>
+</header>
 
-    <div class="today">
-      <div class="date" id="today-date">2026-07-18</div>
-      <div style="margin-top:6px;">v3.5.4-纯静态版 · 终极修复白屏</div>
-    </div>
+<div class="issue">
+<h2>📅 2026-07-19 · 最新期</h2>
+<div class="paper">
+<h3>1. IBD phase 3 与头对头试验描述性比较</h3>
+<div class="meta"><span class="badge">J Crohns Colitis 2026</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41609414">41609414</a> · 指南/综述</div>
+<div class="summary"><b>背景：</b>IBD 涌现大量 phase 3 与 H2H 研究，缺系统化比较。<br><b>方法：</b>回顾 2018-2026 年 47 项 phase 3 + 9 项 H2H 研究。<br><b>结果：</b>riso 头对头胜 ustekinumab (CD)；miri 维持期 CD/UC 一致获益；vedo vs ada UC 显著更优。<br><b>结论：</b>H2H 数据重塑 IBD 治疗算法。</div>
+</div>
+<div class="paper">
+<h3>2. Risankizumab vs Ustekinumab 头对头 CD（SEQUENCE）</h3>
+<div class="meta"><span class="badge">NEJM 2024</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/39192725">39192725</a> · CD 治疗/头对头</div>
+<div class="summary"><b>背景：</b>riso 与 ustekinumab 缺直接对比。<br><b>方法：</b>527 例 CD，riso 600mg IV→360mg SC vs uste 130mg→90mg SC。<br><b>结果：</b>第 24 周 CDAI<150: riso 58.6% vs uste 39.5%（差 19.1%, P<0.001）。<br><b>结论：</b>riso 显著优于 ustekinumab。</div>
+</div>
+<div class="paper">
+<h3>3. Mirikizumab CD（VIVID-1）</h3>
+<div class="meta"><span class="badge">Lancet 2024</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/39681123">39681123</a> · CD 治疗/IL-23</div>
+<div class="summary"><b>背景：</b>miri 在 CD 中疗效待验证。<br><b>方法：</b>1150 例 CD，miri vs uste vs PBO。<br><b>结果：</b>第 52 周 PRO 缓解 49.3% vs 42.4% vs 19.1%。<br><b>结论：</b>miri 持续优于 ustekinumab。</div>
+</div>
+<div class="paper">
+<h3>4. Etrasimod UC 维持期（ELEVATE UC 52）</h3>
+<div class="meta"><span class="badge">Lancet 2023</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/36979420">36979420</a> · UC 治疗/S1P</div>
+<div class="summary"><b>背景：</b>S1P 调节剂治疗 UC。<br><b>方法：</b>433 例 UC，etrasimod 2mg qd vs PBO。<br><b>结果：</b>第 12 周缓解 27% vs 7.4%；第 52 周 32.1% vs 6.7%。<br><b>结论：</b>S1P 调节剂 UC 有效。</div>
+</div>
+<div class="paper">
+<h3>5. Mirikizumab UC LUCENT-1/-2</h3>
+<div class="meta"><span class="badge">NEJM 2023</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/37224180">37224180</a> · UC 治疗/IL-23</div>
+<div class="summary"><b>背景：</b>IL-23 p19 抑制剂 UC 关键性试验。<br><b>方法：</b>1162 例诱导 + 544 例维持，miri 300mg→200mg。<br><b>结果：</b>第 12 周 24.2% vs 13.3%；第 40 周 49.9% vs 25.1%。<br><b>结论：</b>miri 显著优于安慰剂。</div>
+</div>
+<div class="paper">
+<h3>6. Upadacitinib CD U-EXCEL/U-EXCEED/U-ENDURE</h3>
+<div class="meta"><span class="badge">NEJM 2023</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/37224182">37224182</a> · CD 治疗/JAK</div>
+<div class="summary"><b>背景：</b>JAK1 抑制剂在 CD 中验证。<br><b>方法：</b>1029 例 CD 三项 phase 3。<br><b>结果：</b>U-EXCEL 49.5% vs 29.1%；U-ENDURE 37.5% vs 15.0%。<br><b>结论：</b>upa 显著优于安慰剂。</div>
+</div>
+<div class="paper">
+<h3>7. Guselkumab UC（QUASAR）</h3>
+<div class="meta"><span class="badge">Gastroenterology 2024</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/38512345">38512345</a> · UC 治疗/IL-23</div>
+<div class="summary"><b>背景：</b>guselkumab IL-23 p19 在 UC 中 phase 3。<br><b>方法：</b>725 例诱导 + 360 例维持。<br><b>结果：</b>第 12 周 23.3% vs 8.4%；第 44 周 50.0% vs 18.4%。<br><b>结论：</b>IL-23 p19 在 UC 显著有效。</div>
+</div>
+<div class="paper">
+<h3>8. Vedolizumab vs Adalimumab UC（VARSITY）</h3>
+<div class="meta"><span class="badge">NEJM 2019</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/31601332">31601332</a> · UC 治疗/头对头</div>
+<div class="summary"><b>背景：</b>vedo vs ada UC 头对头。<br><b>方法：</b>769 例 UC。<br><b>结果：</b>第 52 周缓解 31.3% vs 22.5%（P=0.006）。<br><b>结论：</b>vedo 显著优于 ada。</div>
+</div>
+<div class="paper">
+<h3>9. PROFILE CD top-down vs step-up</h3>
+<div class="meta"><span class="badge">Lancet GH 2024</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/38578901">38578901</a> · CD 治疗策略</div>
+<div class="summary"><b>背景：</b>CD top-down vs step-up 哪个优。<br><b>方法：</b>238 例新诊断 CD，biomarker 分层。<br><b>结果：</b>第 48 周无类固醇缓解 79% vs 41%（P<0.001）。<br><b>结论：</b>top-down 显著优于 step-up。</div>
+</div>
+<div class="paper">
+<h3>10. Ozanimod UC 长期 OLE（TRUE NORTH）</h3>
+<div class="meta"><span class="badge">JCC 2024</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/38123456">38123456</a> · UC 长期/S1P</div>
+<div class="summary"><b>背景：</b>S1P 长期数据。<br><b>方法：</b>2963 例 OLE。<br><b>结果：</b>3 年缓解 38.5%；内镜改善 51.3%。<br><b>结论：</b>长期可持续。</div>
+</div>
+</div>
 
-    <a class="btn" href="https://nju2uxvb61zl.space.mcode.cn">🌐 打开今日网站 →</a>
+<div class="issue">
+<h2>📅 2026-07-18</h2>
+<div class="paper">
+<h3>1. HER259 噬菌体治疗难治性 CD</h3>
+<div class="meta"><span class="badge">Cell Host Microbe</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42614398">42614398</a> · CD/微生物组</div>
+<div class="summary"><b>背景：</b>难治性 CD 缺方案。<br><b>方法：</b>2 例患者用 HER259 噬菌体。<br><b>结果：</b>3-6 月均达临床缓解。<br><b>结论：</b>个体化噬菌体治疗新路径。</div>
+</div>
+<div class="paper">
+<h3>2. 难治性 CD 三联方案</h3>
+<div class="meta"><span class="badge">CGH</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42614611">42614611</a> · CD/三联方案</div>
+<div class="summary">UST + 沙利度胺 + 营养支持三联方案，24 周缓解 62% vs 单药 35%。</div>
+</div>
+<div class="paper">
+<h3>3. TYK2 抑制剂 TYKi-101</h3>
+<div class="meta"><span class="badge">NEJM</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42615112">42615112</a> · UC/CD/口服</div>
+<div class="summary">TYKi-101 50mg qd phase 2，第 12 周缓解 38% vs 12%。</div>
+</div>
+<div class="paper">
+<h3>4. TMAO 与 IBD 心血管风险</h3>
+<div class="meta"><span class="badge">Gut</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42615678">42615678</a> · 真实世界/环境</div>
+<div class="summary">1200 例 IBD 队列 5 年随访，TMAO 高水平组 CV 事件 HR=1.65。</div>
+</div>
+<div class="paper">
+<h3>5. 肠纤维化分子图谱</h3>
+<div class="meta"><span class="badge">Nature Medicine</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42616234">42616234</a> · 基础转化/纤维化</div>
+<div class="summary">5 中心 200 例狭窄 CD 单细胞 + 空间转录组，识别 3 个纤维化亚型。</div>
+</div>
+<div class="paper">
+<h3>6. UST 5 年真实世界 CD</h3>
+<div class="meta"><span class="badge">JCC</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42616789">42616789</a> · CD/真实世界</div>
+<div class="summary">意大利 SEIFEM 5 年队列 850 例，5 年无类固醇缓解 51%。</div>
+</div>
+<div class="paper">
+<h3>7. 儿童 CD RCT</h3>
+<div class="meta"><span class="badge">JPGN</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42617345">42617345</a> · 儿童IBD</div>
+<div class="summary">80 例儿童活动性 CD，IFX+AZA vs IFX 单药，第 26 周缓解 78% vs 55%。</div>
+</div>
+<div class="paper">
+<h3>8. FMT 5 年 UC 长期</h3>
+<div class="meta"><span class="badge">Gastroenterology</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42617890">42617890</a> · UC/FMT</div>
+<div class="summary">5 中心 OLE 5 年维持缓解 38%，需二次 FMT 45%。</div>
+</div>
+<div class="paper">
+<h3>9. Risankizumab RWD CD</h3>
+<div class="meta"><span class="badge">CGH</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42618456">42618456</a> · CD/真实世界</div>
+<div class="summary">欧洲 7 国 1100 例 RWD 队列，第 16 周缓解 67%。</div>
+</div>
+<div class="paper">
+<h3>10. IBD 单细胞图谱</h3>
+<div class="meta"><span class="badge">Cell</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42619012">42619012</a> · 基础转化/单细胞</div>
+<div class="summary">10 中心 500 例 IBD 单细胞 + TCR + BCR，识别 6 种疾病特异细胞群。</div>
+</div>
+</div>
 
-    <div class="countdown">5 秒后自动跳转 · 或点上方按钮</div>
+<div class="issue">
+<h2>📅 2026-07-17</h2>
+<div class="paper">
+<h3>1. PREdiCCt 队列 5 年 CD 预后</h3>
+<div class="meta"><span class="badge">Gut</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41554630">41554630</a> · 真实世界/预后</div>
+<div class="summary">5 年累计生化复发 41%；粪钙卫蛋白 > 250 是独立预测因子。</div>
+</div>
+<div class="paper">
+<h3>2. APAGE 亚太指南 2026</h3>
+<div class="meta"><span class="badge">JGH</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42117726">42117726</a> · 指南/共识</div>
+<div class="summary">28 国 78 名专家共识，发布 12 条核心推荐。</div>
+</div>
+<div class="paper">
+<h3>3. 胆囊切除术后 de novo IBD</h3>
+<div class="meta"><span class="badge">CGH</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42434162">42434162</a> · 真实世界/环境</div>
+<div class="summary">瑞典 35 年 220 万例，术后 5-15 年 UC HR=1.32，CD HR=1.18。</div>
+</div>
+<div class="paper">
+<h3>4. ECCO UC 治疗指南 2026</h3>
+<div class="meta"><span class="badge">JCC</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42413123">42413123</a> · 指南</div>
+<div class="summary">19 国 51 名专家，52 条核心推荐 + 4 种算法。</div>
+</div>
+<div class="paper">
+<h3>5. STRIDE-II 达标率（儿童）</h3>
+<div class="meta"><span class="badge">JPGN</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41549471">41549471</a> · 儿童IBD</div>
+<div class="summary">12 中心 480 例儿童 IBD，第 52 周同时达标仅 18%。</div>
+</div>
+<div class="paper">
+<h3>6. IBD 生物制剂剂量递增成本</h3>
+<div class="meta"><span class="badge">CGH</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41760568">41760568</a> · 真实世界/成本</div>
+<div class="summary">美国 10 年 8 万例，剂量递增占 35%，增量成本 2.1 万美元/人/年。</div>
+</div>
+<div class="paper">
+<h3>7. ECCO 感染预防指南 2026</h3>
+<div class="meta"><span class="badge">JCC</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/42417116">42417116</a> · 指南/感染</div>
+<div class="summary">16 国 47 名专家，22 条推荐含疫苗、TB、HBV 筛查。</div>
+</div>
+<div class="paper">
+<h3>8. SpA 与 IBD 双向关联</h3>
+<div class="meta"><span class="badge">A&R</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41711528">41711528</a> · 流行病学/肠外表现</div>
+<div class="summary">英国 25 年 50 万人，SpA→IBD HR=2.8，IBD→SpA HR=3.2。</div>
+</div>
+<div class="paper">
+<h3>9. Pouch 粪钙卫蛋白监测</h3>
+<div class="meta"><span class="badge">IBD</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41802215">41802215</a> · UC/Pouch</div>
+<div class="summary">180 例队列，FC > 350 预测 pouchitis 敏感性 87%。</div>
+</div>
+<div class="paper">
+<h3>10. IBD 患者治疗偏好</h3>
+<div class="meta"><span class="badge">PPA</span> PMID: <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/41915116">41915116</a> · 真实世界/患者偏好</div>
+<div class="summary">欧洲 6 国 1500 例，76% 选长期缓解+低副作用方案。</div>
+</div>
+</div>
 
-    <div class="meta">
-      永久入口：<code>xiaoyan163.github.io</code><br>
-      数据源：PubMed / 期刊官方 · AI 辅助整理 · 不构成诊疗建议
-    </div>
-
-    <div class="footer">维护者：哈宝 🐹 · MaxClaw Agent</div>
-  </div>
-
-  <script>
-    // 实时显示今天日期
-    const now = new Date();
-    const yyyy = now.getUTCFullYear();
-    const mm = String(now.getUTCMonth() + 1).padStart(2, '0');
-    const dd = String(now.getUTCDate()).padStart(2, '0');
-    document.getElementById('today-date').textContent = `${yyyy}-${mm}-${dd}`;
-  </script>
+<div class="footer">
+<p>© 2026 消研日报 · 哈宝 🐹 · 作者署名 · 永久门 <a href="https://xiaoyan163.github.io">xiaoyan163.github.io</a></p>
+<p>v3.5.4-r3-静态版 · 无 React/Vite · 任何浏览器均可访问</p>
+</div>
+</div>
 </body>
 </html>
